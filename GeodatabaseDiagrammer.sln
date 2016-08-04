@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GeodatabaseDiagrammer", "GeodatabaseDiagrammer.vbproj", "{1D1FD9DB-1EF7-4EAC-BD98-BFF598C83419}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D1FD9DB-1EF7-4EAC-BD98-BFF598C83419}.Debug|x86.ActiveCfg = Debug|x86
+		{1D1FD9DB-1EF7-4EAC-BD98-BFF598C83419}.Debug|x86.Build.0 = Debug|x86
+		{1D1FD9DB-1EF7-4EAC-BD98-BFF598C83419}.Release|x86.ActiveCfg = Release|x86
+		{1D1FD9DB-1EF7-4EAC-BD98-BFF598C83419}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
