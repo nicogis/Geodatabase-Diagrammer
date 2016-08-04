@@ -5,7 +5,7 @@ Imports ESRI.ArcGIS.Geometry
 ' Imports Microsoft.Office.Interop
 
 
-Module VisoDiagram
+Module VisioDiagram
 
 #Region "Member Variables"
 
@@ -909,7 +909,7 @@ endOfFunction:
 
     End Sub
 
-    Public Function startDomain(ByVal cDomainName As String, ByVal cDomainDescription As String, ByVal iFieldType As Integer, _
+    Public Function startDomain(ByVal cDomainName As String, ByVal cDomainDescription As String, ByVal iFieldType As Integer,
                                                     ByVal iDomainType As Integer, ByVal iMergePolicy As Integer, ByVal iSplitPolicy As Integer, ByVal numDomainValues As Long, ByRef pDomain As IDomain)
 
         Dim pCodedValueDomain As ICodedValueDomain
@@ -1049,8 +1049,8 @@ endOfFunction:
     End Function
 #Enable Warning BC42105 ' Function 'startDomain' doesn't return a value on all code paths. A null reference exception could occur at run time when the result is used.
 
-    Public Function DiagramRelationship(ByVal cRelationshipClass As String, ByVal lIsManyToMany As Boolean, ByRef cRelProp1 As String, ByRef cRelProp2 As String, ByRef cRelProp3 As String, _
-                                                         ByRef cRelProp4 As String, ByRef iOriginType As Integer, ByRef iDestinationType As Integer, ByRef lAttributed As Boolean, _
+    Public Function DiagramRelationship(ByVal cRelationshipClass As String, ByVal lIsManyToMany As Boolean, ByRef cRelProp1 As String, ByRef cRelProp2 As String, ByRef cRelProp3 As String,
+                                                         ByRef cRelProp4 As String, ByRef iOriginType As Integer, ByRef iDestinationType As Integer, ByRef lAttributed As Boolean,
                                                          Optional ByRef pRelationshipTableFields As IFields = Nothing)
 
         Dim xRel1 As Double
@@ -1256,17 +1256,17 @@ endOfFunction:
                     If cUCaseFieldName = "SHAPE_LENGTH" Or cUCaseFieldName = "ENABLED" Then result = "Reserved field box"
 
                 Case esriFeatureType.esriFTAnnotation
-                    If cUCaseFieldName = "SHAPE_LENGTH" Or cUCaseFieldName = "SHAPE_AREA" Or _
-                        cUCaseFieldName = "FEATUREID" Or cUCaseFieldName = "ZORDER" Or cUCaseFieldName = "ANNOTATIONCLASSID" Or _
+                    If cUCaseFieldName = "SHAPE_LENGTH" Or cUCaseFieldName = "SHAPE_AREA" Or
+                        cUCaseFieldName = "FEATUREID" Or cUCaseFieldName = "ZORDER" Or cUCaseFieldName = "ANNOTATIONCLASSID" Or
                         cUCaseFieldName = "ELEMENT" Then result = "Reserved field box"
 
                 Case esriFeatureType.esriFTDimension
-                    If cUCaseFieldName = "SHAPE_LENGTH" Or cUCaseFieldName = "SHAPE_AREA" Or _
-                        cUCaseFieldName = "DIMLENGTH" Or cUCaseFieldName = "BEGINX" Or cUCaseFieldName = "BEGINY" Or _
-                        cUCaseFieldName = "ENDX" Or cUCaseFieldName = "ENDY" Or cUCaseFieldName = "DIMX" Or _
-                        cUCaseFieldName = "DIMY" Or cUCaseFieldName = "TEXTX" Or cUCaseFieldName = "TEXTY" Or _
-                        cUCaseFieldName = "DIMTYPE" Or cUCaseFieldName = "EXTANGLE" Or cUCaseFieldName = "STYLEID" Or _
-                        cUCaseFieldName = "USECUSTOMLENGTH" Or cUCaseFieldName = "CUSTOMLENGTH" Or cUCaseFieldName = "DIMDISPLAY" Or _
+                    If cUCaseFieldName = "SHAPE_LENGTH" Or cUCaseFieldName = "SHAPE_AREA" Or
+                        cUCaseFieldName = "DIMLENGTH" Or cUCaseFieldName = "BEGINX" Or cUCaseFieldName = "BEGINY" Or
+                        cUCaseFieldName = "ENDX" Or cUCaseFieldName = "ENDY" Or cUCaseFieldName = "DIMX" Or
+                        cUCaseFieldName = "DIMY" Or cUCaseFieldName = "TEXTX" Or cUCaseFieldName = "TEXTY" Or
+                        cUCaseFieldName = "DIMTYPE" Or cUCaseFieldName = "EXTANGLE" Or cUCaseFieldName = "STYLEID" Or
+                        cUCaseFieldName = "USECUSTOMLENGTH" Or cUCaseFieldName = "CUSTOMLENGTH" Or cUCaseFieldName = "DIMDISPLAY" Or
                         cUCaseFieldName = "EXTDISPLAY" Or cUCaseFieldName = "MARKERDISPLAY" Or cUCaseFieldName = "TEXTANGLE" Then result = "Reserved field box"
 
             End Select

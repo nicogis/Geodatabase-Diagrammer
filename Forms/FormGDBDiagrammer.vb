@@ -281,16 +281,16 @@ Public Class FormGDBDiagrammer
             System.Windows.Forms.Application.DoEvents()
 
 
-            VisoDiagram.StartDiagram(mWorkspace.PathName, Me.txtOutputFile.Text)
+            VisioDiagram.StartDiagram(mWorkspace.PathName, Me.txtOutputFile.Text)
 
-            VisoDiagram.SectionHeader()
+            VisioDiagram.SectionHeader()
             WriteObjectClassInformation()
             WriteRelationshipClassInformation()
 
             Me.chkSummary.Checked = False
             pDiagrammerSettings.Summary = False
 
-            VisoDiagram.SectionHeader()
+            VisioDiagram.SectionHeader()
             WriteObjectClassInformation()
             WriteRelationshipClassInformation()
             WriteDomainInformation()
@@ -305,7 +305,7 @@ Public Class FormGDBDiagrammer
             '-----------------------------------
             ' Stop diagramming tool. MNZ
             '-----------------------------------
-            VisoDiagram.CloseDiagram()
+            VisioDiagram.CloseDiagram()
 
             Me.ToolStripStatusLabel1.Text = "Completed the diagram."
             System.Windows.Forms.Application.DoEvents()
@@ -459,7 +459,7 @@ Public Class FormGDBDiagrammer
             '------------------------------------------------------------
             ' Retrieve Registry Key Value...
             '------------------------------------------------------------
-            rc = RegQueryValueEx(hKey, SubKeyRef, 0, _
+            rc = RegQueryValueEx(hKey, SubKeyRef, 0,
                                  KeyValType, tmpVal, KeyValSize)    ' Get/Create Key Value
 
             'If (rc <> ERROR_SUCCESS) Then GoTo GetKeyError ' Handle Errors
@@ -657,7 +657,7 @@ Public Class FormGDBDiagrammer
                     sHasZs = "No"
                 End If
 
-                VisoDiagram.StartFeatureClass(pDataset.Name, pFeatureClass.FeatureType, _
+                VisioDiagram.StartFeatureClass(pDataset.Name, pFeatureClass.FeatureType,
                   pFeatureClass.ShapeType, pFeatureClass.Fields.FieldCount, sHasMs, sHasZs, sAbstract)
 
             Else
@@ -678,7 +678,7 @@ Public Class FormGDBDiagrammer
                     sAbstract = ""
                 End If
 
-                VisoDiagram.startTable(pDataset.Name, pObjectClass.Fields.FieldCount, sAbstract)
+                VisioDiagram.startTable(pDataset.Name, pObjectClass.Fields.FieldCount, sAbstract)
             End If
             '
             pSubtypes = pObjectClass
@@ -779,7 +779,7 @@ Public Class FormGDBDiagrammer
 
                 lSubtypeFromBottom = pObjectClass.Fields.FieldCount - lSubtypeFieldIndex
                 sClassName = pDataset.Name
-                VisoDiagram.startSubtype(sClassName, sSubtypeField, lSubtypeFromBottom, sDefaultSubtype, numSubtypes, numFieldArray)
+                VisioDiagram.startSubtype(sClassName, sSubtypeField, lSubtypeFromBottom, sDefaultSubtype, numSubtypes, numFieldArray)
 
                 'Loop through subtypes and write out subtype default value and domain name
 
@@ -817,12 +817,12 @@ Public Class FormGDBDiagrammer
                         End If
                     Next i
 
-                    VisoDiagram.diagramSubtype(sSubtypeCode, sSubtypeName, numFieldArray, sFieldNames, sDefaultValues, sDomains)
+                    VisioDiagram.diagramSubtype(sSubtypeCode, sSubtypeName, numFieldArray, sFieldNames, sDefaultValues, sDomains)
                     sSubT = pEnumSubTypes.Next(lSubT)
 
                 Loop
 
-                VisoDiagram.finishSubtype()
+                VisioDiagram.finishSubtype()
 
             End If
 
@@ -889,7 +889,7 @@ Public Class FormGDBDiagrammer
 
                 For pIndexDataset = 0 To Me.lstDataset.Items.Count - 1 Step 1
                     pSplitDS = Split(Me.lstDataset.Items.Item(pIndexDataset), "|")
-                    If CLng(pSplitDS(3)) = esriDatasetType.esriDTFeatureClass Or _
+                    If CLng(pSplitDS(3)) = esriDatasetType.esriDTFeatureClass Or
                        CLng(pSplitDS(3)) = esriDatasetType.esriDTTable Then
                         pDataset = pFeatureWorkspace.OpenTable(CStr(pSplitDS(2)))
                         pObjectClass = pDataset
@@ -901,10 +901,10 @@ Public Class FormGDBDiagrammer
                                 For pIndexFD = 0 To pObjectClass.Fields.FieldCount - 1 Step 1
                                     pDomain = pSubtypes.Domain(pIndexST, pObjectClass.Fields.Field(pIndexFD).Name)
                                     If Not (pDomain Is Nothing) Then
-                                        Me.lstTemp.Items.Add(pDomain.Name & "|" & _
-                                                           CStr(pSplitDS(2)) & "|" & _
-                                                           CLng(pSplitDS(3)) & "|" & _
-                                                           pSubtypeName & "|" & _
+                                        Me.lstTemp.Items.Add(pDomain.Name & "|" &
+                                                           CStr(pSplitDS(2)) & "|" &
+                                                           CLng(pSplitDS(3)) & "|" &
+                                                           pSubtypeName & "|" &
                                                            pObjectClass.Fields.Field(pIndexFD).Name)
 
                                     End If
@@ -915,10 +915,10 @@ Public Class FormGDBDiagrammer
                             For pIndexFD = 0 To pObjectClass.Fields.FieldCount - 1 Step 1
                                 pDomain = pObjectClass.Fields.Field(pIndexFD).Domain
                                 If Not (pDomain Is Nothing) Then
-                                    Me.lstTemp.Items.Add(pDomain.Name & "|" & _
-                                                       CStr(pSplitDS(2)) & "|" & _
-                                                       CLng(pSplitDS(3)) & "|" & _
-                                                       mNoData & "|" & _
+                                    Me.lstTemp.Items.Add(pDomain.Name & "|" &
+                                                       CStr(pSplitDS(2)) & "|" &
+                                                       CLng(pSplitDS(3)) & "|" &
+                                                       mNoData & "|" &
                                                        pObjectClass.Fields.Field(pIndexFD).Name)
 
                                 End If
@@ -945,12 +945,12 @@ Public Class FormGDBDiagrammer
                             numDomainValues = 1
                     End Select
 
-                    VisoDiagram.startDomain(pDomain.Name, _
-                                            pDomain.Description, _
-                                            pDomain.FieldType, _
-                                            CLng(pSplitDM(1)), _
-                                            pDomain.MergePolicy, _
-                                            pDomain.SplitPolicy, _
+                    VisioDiagram.startDomain(pDomain.Name,
+                                            pDomain.Description,
+                                            pDomain.FieldType,
+                                            CLng(pSplitDM(1)),
+                                            pDomain.MergePolicy,
+                                            pDomain.SplitPolicy,
                                             numDomainValues, pDomain)
 
                 Next pIndexDomain
@@ -1136,11 +1136,11 @@ Public Class FormGDBDiagrammer
 
                     If pRelationshipClass.IsAttributed Then
 #Disable Warning BC42104 ' Variable 'pRelationshipTable' is used before it has been assigned a value. A null reference exception could result at runtime.
-                        VisoDiagram.DiagramRelationship(pDataset.Name, lIsManyToMany, cRelProp1, cRelProp2, cRelProp3, cRelProp4, _
+                        VisioDiagram.DiagramRelationship(pDataset.Name, lIsManyToMany, cRelProp1, cRelProp2, cRelProp3, cRelProp4,
                           iOriginType, iDestinationType, pRelationshipClass.IsAttributed, pRelationshipTable.Fields)
 #Enable Warning BC42104 ' Variable 'pRelationshipTable' is used before it has been assigned a value. A null reference exception could result at runtime.
                     Else
-                        VisoDiagram.DiagramRelationship(pDataset.Name, lIsManyToMany, cRelProp1, cRelProp2, cRelProp3, cRelProp4, _
+                        VisioDiagram.DiagramRelationship(pDataset.Name, lIsManyToMany, cRelProp1, cRelProp2, cRelProp3, cRelProp4,
                          iOriginType, iDestinationType, pRelationshipClass.IsAttributed)
                     End If
 
@@ -1253,17 +1253,17 @@ Public Class FormGDBDiagrammer
 
 #Region "Public Functions"
 
-    Private Sub WriteObjectClassInformation3(ByRef pFields As IFields, _
-                                        ByRef pDatasetName As String, _
-                                        Optional ByRef pSubtypes As ISubtypes = Nothing, _
-                                        Optional ByRef lngSubtypeCode As Long = 0, _
+    Private Sub WriteObjectClassInformation3(ByRef pFields As IFields,
+                                        ByRef pDatasetName As String,
+                                        Optional ByRef pSubtypes As ISubtypes = Nothing,
+                                        Optional ByRef lngSubtypeCode As Long = 0,
                                         Optional ByVal metadata As IPropertySet = Nothing)
         Try
 
             Dim pFieldCounter As Long
             Dim pDomain As IDomain
 
-            Call VisoDiagram.DiagramFeatureClass(pFields, pDatasetName, metadata)
+            Call VisioDiagram.DiagramFeatureClass(pFields, pDatasetName, metadata)
 
             For pFieldCounter = 0 To pFields.FieldCount - 1 Step 1
                 If pSubtypes Is Nothing Then

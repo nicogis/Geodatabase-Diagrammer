@@ -150,7 +150,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Commands\GDBDiagrammer.vb" />
-    <Compile Include="Helpers\VisoDiagram.vb" />
+    <Compile Include="Helpers\VisioDiagram.vb" />
     <AddInContent Include="Images\GDBDiagrammer.png" />
   </ItemGroup>
   <ItemGroup>
