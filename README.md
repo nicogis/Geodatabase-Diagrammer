@@ -74,3 +74,5 @@ The Status bar at the bottom of the form will show messages as the diagram is be
 When it is finished it will read “Completed the diagram”.
 - Click Close to close the form.
 - Browse to the Visio (.vsd) output file and double‐click it to open it.
+
+![File V S D](Images/FileVSD.PNG)
