@@ -205,9 +205,9 @@ Partial Class FormGDBDiagrammer
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(262, 7)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(37, 13)
+        Me.Label2.Size = New System.Drawing.Size(34, 13)
         Me.Label2.TabIndex = 14
-        Me.Label2.Text = "v1.2.1"
+        Me.Label2.Text = "v10.5"
         '
         'StatusStrip1
         '
