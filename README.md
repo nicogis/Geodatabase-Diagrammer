@@ -4,7 +4,7 @@
 This will create a Visio diagram showing the classes and their schema in a geodatabase of your choosing. Use this tool to create a data model poster.
 This code was originally produced by ESRI (Richie Carmichael and Michael Zeiler) in 2002 for version 8.3.
 The link is [http://www.arcgis.com/home/item.html?id=a378b48be11b45b5bb25254643304cb7](http://www.arcgis.com/home/item.html?id=a378b48be11b45b5bb25254643304cb7).
-I only have recompiled for ArcGIS 10.4.1 and Visio 2016
+I only have recompiled for ArcGIS 10.5 and Visio 2016
 
 #### System Requirements
 
