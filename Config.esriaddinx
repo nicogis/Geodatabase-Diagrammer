@@ -2,13 +2,13 @@
   <Name>Geodatabase Diagrammer</Name>
   <AddInID>{bbf7ae19-151b-4ebf-b819-c2263719f31b}</AddInID>
   <Description>Creates a Visio drawing of the schema in your geodatabase.</Description>
-  <Version>1.2</Version>
+  <Version>10.5</Version>
   <Image>Images\GeodatabaseDiagrammer.png</Image>
   <Author></Author>
   <Company></Company>
-  <Date>08/04/2016</Date>
+  <Date>02/01/2017</Date>
   <Targets>
-    <Target name="Desktop" version="10.4" />
+    <Target name="Desktop" version="10.5" />
   </Targets>
   <AddIn language="CLR" library="GeodatabaseDiagrammer.dll" namespace="GeodatabaseDiagrammer">
     <ArcCatalog>
