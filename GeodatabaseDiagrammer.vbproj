@@ -212,9 +212,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\AddIn.PNG" />
     <Content Include="Images\ArcCatalog.PNG" />
     <Content Include="Images\ArcCatalogDiagrammer.PNG" />
+    <Content Include="Images\AddIn.PNG" />
     <Content Include="Images\FileVSD.PNG" />
     <Content Include="Images\VisioFileBlock.PNG" />
     <Content Include="Images\VisioTemplateStencils.PNG" />
