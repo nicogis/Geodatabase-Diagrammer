@@ -21,7 +21,7 @@ This application does not support exotic custom feature class types. The types t
 - Network (simple or complex edges and junctions)
 
 #### Setup
-- Download from (https://github.com/nicogis/Geodatabase-Diagrammer/releases)
+- Download from https://github.com/nicogis/Geodatabase-Diagrammer/releases
 - Unzip …
 - Close ArcCatalog if open.
 - Double‐click the file “GeodatabaseDiagrammer.esriAddIn”. 
