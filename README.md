@@ -4,12 +4,12 @@
 This will create a Visio diagram showing the classes and their schema in a geodatabase of your choosing. Use this tool to create a data model poster.
 This code was originally produced by ESRI (Richie Carmichael and Michael Zeiler) in 2002 for version 8.3.
 The link is [http://www.arcgis.com/home/item.html?id=a378b48be11b45b5bb25254643304cb7](http://www.arcgis.com/home/item.html?id=a378b48be11b45b5bb25254643304cb7).
-I only have recompiled for ArcGIS 10.5 and Visio 2016
+I only have recompiled for ArcGIS 10.5 and Visio Pro 2016-2019 32bit
 
 #### System Requirements
 
-- ArcGIS Desktop version 10.5
-- Microsoft Visio Pro 2016
+- ArcGIS Desktop version 10.5 or superior
+- Microsoft Visio Pro 2016-2019 32bit
 - .NET 4.5 Framework
 
 #### Limitations
@@ -21,7 +21,7 @@ This application does not support exotic custom feature class types. The types t
 - Network (simple or complex edges and junctions)
 
 #### Setup
-
+- Download from https://github.com/nicogis/Geodatabase-Diagrammer/releases
 - Unzip …
 - Close ArcCatalog if open.
 - Double‐click the file “GeodatabaseDiagrammer.esriAddIn”. 
