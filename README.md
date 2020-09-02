@@ -10,7 +10,7 @@ I only have recompiled for ArcGIS 10.5 and Visio Pro 2016-2019 32bit
 
 - ArcGIS Desktop version 10.5 or superior
 - Microsoft Visio Pro 2016-2019 32bit
-- .NET 4.5 Framework
+- .NET 4.6.1 Framework
 
 #### Limitations
 This application does not support exotic custom feature class types. The types that are supported are:
