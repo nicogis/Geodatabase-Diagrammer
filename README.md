@@ -8,7 +8,7 @@ I only have recompiled for ArcGIS 10.5 and Visio Pro 2016-2019 32bit
 
 #### System Requirements
 
-- ArcGIS Desktop version 10.5 or superior
+- ArcGIS Desktop version 10.7.1 or superior
 - Microsoft Visio Pro 2016-2019 32bit
 - .NET 4.6.1 Framework
 
